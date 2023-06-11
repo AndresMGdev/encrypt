@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+
+*{
+  background:#f5f6f8;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  padding-top: 20px;
+  margin-left: 10px;
+  width: 10%;
+}
+main{
+  display: flex;
+  justify-content: space-evenly;
+}
+.text-to-encrypt{
+  height: 340px;
+  border: none;
+  border-radius: 14px;
+  color: #0A3871;
+  width: 96%;
+  margin-top: 30px;
+  padding: 10px 2% 10px 2%;
+  text-transform: lowercase;
+  -webkit-box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.66);
+  -moz-box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.66);
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.66);
+}
+::placeholder{ color: #0A3871; }
+.text-to-encrypt:focus { outline: none; }
+.section-encryted{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}  
+.menssage-encrypted{
+  height: 340px;
+  margin: 30px 0 30px 0;
+  padding: 10px 2% 10px 2%;
+  background: white;
+  background-image: url("/caricature.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 14px;
+  color: #0A3871;
+  -webkit-box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.66);
+  -moz-box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.66);
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.66);
+}
+.menssage-encrypted:focus {
+  outline: none;
+}
+
+.buttons{
+  display: flex;
+  margin-top: 18px;
+}
+.btn-decrypt {
+  background: #D8DFE8;
+  color: #0A3871;
+  height: auto;
+  width: 250px;
+  margin: 0 0 5px 5px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+}
+.btn-encrypt {
+  background-color: #0A3871;
+  color: #D8DFE8;
+  cursor: pointer;
+  height: auto;
+  width: 250px;
+  margin: 0 5px 5px 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+}
+.copy-message {
+  color: #0A3871;
+  background: #a7d3ff;
+  cursor: pointer;
+  height: auto;
+  width: 100%;
+  margin-top: 18px;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+}
+.information {
+  color: #495057;
+  font-size:18px;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto yellow;
+}
+@media only screen and (max-width: 600px) {
+  main{
+    flex-direction: column;
+    align-items: center
+  }
+  .text-to-encrypt, .menssage-encrypted{
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+  }
+  .section-encryted{
+    align-items: center;
+  }
+  .section-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .buttons{
+    justify-content: space-evenly
+  }
+  .copy-message, .btn-decrypt, .btn-encrypt{
+    width: auto;
+  }
+}
