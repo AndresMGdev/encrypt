@@ -1,4 +1,5 @@
 import CryptoJS from 'crypto-js';
+import Swal from 'sweetalert2';
 import { useState } from 'react';
 
 function Encrypt() {
@@ -28,6 +29,12 @@ function Encrypt() {
         text.select();
         text.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(text.value);
+        Swal.fire({
+            title: 'Copied',
+            text: 'Message encrypted to clipboard',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        });
         setEncryptedData("");
     };
 
@@ -38,7 +45,7 @@ function Encrypt() {
     const decryptClick = () => {
         if (!text) return;
         decryptData();
-    }
+    }  
     return (
         <>
             <section className='section-options'>
